@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F45BC17-78E5-4CA1-AB6B-8BBDD63AF5BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Paccurate</RootNamespace>
+    <AssemblyName>Paccurate.SDK</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\CMS\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Box.cs" />
+    <Compile Include="Models\BoxProperties.cs" />
+    <Compile Include="Models\BoxType.cs" />
+    <Compile Include="Models\Enums\BoxTypeChoiceEnum.cs" />
+    <Compile Include="Models\Enums\BoxTypeChoiceGoalEnum.cs" />
+    <Compile Include="Models\Enums\BoxTypeSetEnum.cs" />
+    <Compile Include="Models\Enums\CoordinateOrderEnum.cs" />
+    <Compile Include="Models\Enums\ImageFormatEnum.cs" />
+    <Compile Include="Models\Enums\ItemSortEnum.cs" />
+    <Compile Include="Models\Enums\OperationEnum.cs" />
+    <Compile Include="Models\Enums\PlacementStyleEnum.cs" />
+    <Compile Include="Models\Enums\ValueTieBreakerEnum.cs" />
+    <Compile Include="Models\Error.cs" />
+    <Compile Include="Models\Image.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemProperties.cs" />
+    <Compile Include="Models\ItemSet.cs" />
+    <Compile Include="Models\BoxContainer.cs" />
+    <Compile Include="Models\ImageContainer.cs" />
+    <Compile Include="Models\ItemContainer.cs" />
+    <Compile Include="PackRequest.cs" />
+    <Compile Include="PackRequestHandler.cs" />
+    <Compile Include="PackResponse.cs" />
+    <Compile Include="Models\Point.cs" />
+    <Compile Include="Models\RateTable.cs" />
+    <Compile Include="Models\Rule.cs" />
+    <Compile Include="Models\Subspace.cs" />
+    <Compile Include="PackResponseHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
